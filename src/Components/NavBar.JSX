@@ -1,11 +1,19 @@
 import React from "react";
+import Header from "./Header.jsx";
 
-const SideNav = () => (
+const NavBar = () => {
+
+return (
       <div className="sideNav">
-            <h1>Dashboard</h1>
-            <h1>Search</h1>
-            <h1>About</h1>
+            <br></br>
+            <Header />
+            <br></br>
+            <br></br>
+            <h1>📰 Dashboard</h1>
+            <h1>🔍 Search</h1>
+            <h1>🏠 About</h1>
       </div>
-)
+      )
+}
 
-export default SideNav;
+export default NavBar;

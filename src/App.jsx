@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar.jsx'
+import Card from './Components/Card.jsx'
+import List from './Components/List.jsx'
 
 const API_KEY = import.meta.env.VITE_API_KEY
 
@@ -10,8 +12,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Marvel World</h1>
       <NavBar />
+      <div className='cardDiv'>
+      <Card />
+      <Card />
+      <Card />
+      </div>
+
+      <div className='listDiv'>
+      <List />
+      </div>
+
     </div>
   )
 }
