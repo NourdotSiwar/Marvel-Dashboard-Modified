@@ -12,7 +12,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className='sidebarDiv'> 
       <NavBar />
+      </div>
+
       <div className='cardDiv'>
       <Card />
       <Card />
