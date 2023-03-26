@@ -1,13 +1,10 @@
-const Card = ({ name, image, description, id }) => {
+const Card = (props) => {
       return (
       <div className="card">
-            <img src={image} alt={name} />
-            <div className="card__info">
-            <h2>{name}</h2>
-            <p>{description}</p>
-            </div>
+            <h2>{props.title}</h2>
+            <h3>{props.name}</h3>
       </div>
-      );
-      }
+);
+}
 
 export default Card;
