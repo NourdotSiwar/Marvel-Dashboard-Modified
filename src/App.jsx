@@ -5,15 +5,23 @@ import NavBar from './Components/NavBar.jsx'
 import Card from './Components/Card.jsx'
 import List from './Components/List.jsx'
 
+// this is the api key and hash from the marvel developer portal
 const API_KEY = import.meta.env.VITE_API_KEY;
 const HASH = import.meta.env.VITE_HASH;
 
 
 function App() {
+
+  // this is the state that will be used to store the list of characters
     const [list, setList] = useState(null);
+
+    // this state is for finding the character with the most comics
     const [mostComicsChar, setMostComicsChar] = useState(null);
+
+    // this state is for finding the total number of comics
     const [numberOfComics, setNumberOfComics] = useState(null);
 
+    // this useEffect hook is to get the list of characters
     useEffect(() => {
     const fetchList = async () => {
           const response = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?&apikey=${API_KEY}&ts=1&hash=${HASH}`)
@@ -22,6 +30,7 @@ function App() {
     fetchList().catch(console.error)
     }, [])
 
+    // this useEffect hook is to get the character with the most comics
     useEffect(() => {
       const fetchMostComics = async () => {
         const response = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?&apikey=${API_KEY}&ts=1&hash=${HASH}`)
@@ -40,6 +49,7 @@ function App() {
  
 
 
+    // this useEffect hook is to get the total number of comics
     useEffect(() => {
     const fetchNumberOfComics = async () => {
           const response = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?&apikey=${API_KEY}&ts=1&hash=${HASH}`)
@@ -55,6 +65,7 @@ function App() {
       <NavBar />
       </div>
 
+      {/* this is the card component that will be used to display the total number of characters, total number of comics, and the character with the most comics */}
       <div className='cardDiv'>
       <Card title={"Total # of Characters: "} name={list ? list.data.total + " characters": "Loading..."} />
       <Card title={"Total # of Comics: "} name={list ? numberOfComics + " comics": "Loading..."} />

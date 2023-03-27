@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header.jsx";
 
+// this is the NavBar component that will be used to display the NavBar on the page
 const NavBar = () => {
 
 return (
