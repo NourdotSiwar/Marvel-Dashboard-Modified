@@ -71,7 +71,6 @@ body {
   font-size: 2.5rem;
 }
 
-
 .card {
   display: flex;
   flex-direction: column;
@@ -123,7 +122,6 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 
 .comicList {
   display: flex;
@@ -186,4 +184,116 @@ body {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+}
+
+.charDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.charDetails h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.charDetails img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.charDetails p {
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.charDetails h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+  background-color: rgba(130, 48, 48, 0.5);
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+
+.charDetails ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.charDetails li {
+  font-size: 18px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 1000px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+
+.charDetails li:hover {
+  background-color: #c0c0c0;
+}
+
+h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px #ffffff80;
+  font-weight: bold;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centered li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.charDetails img {
+  width: 300px;
+  height: 300px;
+  border: 5px solid black;
+  border-radius: 8px;
+
+}
+
+.charDetails p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 10px #ffffff80;
+  border: 2px solid black;
+  border-radius: 5px;
+  max-width: 1000px;
+  transition: background-color 0.2s;
+  background-color: rgba(255, 255, 255, 0.8)
 }

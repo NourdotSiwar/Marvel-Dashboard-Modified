@@ -59,7 +59,6 @@ const List = ( ) => {
             document.querySelectorAll('input[type=text]').forEach((el) => el.value = '');
       }
 
-
       return(
 
       <div className="list">
@@ -109,6 +108,8 @@ const List = ( ) => {
             <li className="titleList"><h3>Image</h3><h3>Name</h3>
             <h3>Comics</h3></li>
 
+
+
             {/* This is the conditional that will be used to display the filtered results,
             if the results are not filtered, then the list of characters will be displayed*/}
             { searchInput.length > 0 || filteredResults.length > 0 ? 
@@ -119,7 +120,9 @@ const List = ( ) => {
                               <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt={item.name} />
                               </div>
                               <div className="nameDiv">
-                              <h3>{item.name}</h3>
+                              <Link style={{color:"white", textDecoration:"underline"}}to={`/CharDetails/${item.id}`} key={item.id} >
+                                    <h3> {item.name} </h3>
+                                    </Link>
                               </div>
                               <div className="comicsDiv">
                               {item.comics.items.map((comic) => {
@@ -139,7 +142,9 @@ const List = ( ) => {
                               <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt={item.name} />
                               </div>
                               <div className="nameDiv">
-                              <h3>{item.name}</h3>
+                              <Link style={{color:"white", textDecoration:"underline"}}to={`/CharDetails/${item.id}`} key={item.id} >
+                                    <h3> {item.name} </h3>
+                                    </Link>
                               </div>
                               <div className="comicsDiv">
                               {item.comics.items.map((comic) => {

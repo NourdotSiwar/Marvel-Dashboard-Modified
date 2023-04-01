@@ -1,8 +1,8 @@
 import './App.css'
 import { useEffect, useState } from "react";
 import axios from "axios";
-import NavBar from './Components/NavBar.jsx'
 import Card from './Components/Card.jsx'
+import Layout from './routes/Layout.jsx'
 import List from './Components/List.jsx'
 
 // this is the api key and hash from the marvel developer portal
@@ -62,7 +62,7 @@ function App() {
   return (
     <div className="App">
       <div className='sidebarDiv'> 
-      <NavBar />
+      <Layout />
       </div>
 
       {/* this is the card component that will be used to display the total number of characters, total number of comics, and the character with the most comics */}
