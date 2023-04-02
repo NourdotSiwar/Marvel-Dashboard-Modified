@@ -318,3 +318,7 @@ h1{
   transition: background-color 0.2s;
   background-color: rgba(255, 255, 255, 0.8)
 }
+
+.tooltip-no-transition .recharts-tooltip-wrapper {
+  transition: none !important;
+}
