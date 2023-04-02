@@ -4,6 +4,7 @@ import axios from "axios";
 import Card from './Components/Card.jsx'
 import Layout from './routes/Layout.jsx'
 import List from './Components/List.jsx'
+import Charts from './Components/Charts.jsx'
 
 // this is the api key and hash from the marvel developer portal
 const API_KEY = import.meta.env.VITE_API_KEY;

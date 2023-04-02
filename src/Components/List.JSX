@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 // this is the api key and hash from the marvel developer portal
 const API_KEY = import.meta.env.VITE_API_KEY;
 const HASH = import.meta.env.VITE_HASH;
+
 
 // this is the List component that will be used to display the list of characters on the page
 const List = ( ) => {
@@ -144,7 +146,7 @@ const List = ( ) => {
                               <div className="nameDiv">
                               <Link style={{color:"white", textDecoration:"underline"}}to={`/CharDetails/${item.id}`} key={item.id} >
                                     <h3> {item.name} </h3>
-                                    </Link>
+                              </Link>
                               </div>
                               <div className="comicsDiv">
                               {item.comics.items.map((comic) => {

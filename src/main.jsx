@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './routes/Layout'
 import DetailView from './routes/DetailView'
 import { Link } from 'react-router-dom'
+import Charts from './Components/Charts'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </main>
             }
           />
+          <Route path="/charts" element={<Charts />} />
         </Route>
       </Routes>
     </BrowserRouter>
