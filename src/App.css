@@ -304,6 +304,8 @@ h1{
   border-radius: 5px;
   padding: 15px 15px;
   margin-bottom: 20px;
+  height: 500px;
+  width: 100%;
 }
 
 .chartDivSummary{
@@ -314,9 +316,9 @@ h1{
   text-shadow: 0 0 10px #ffffff80;
   border: 2px solid black;
   border-radius: 5px;
-  max-width: 1000px;
   transition: background-color 0.2s;
-  background-color: rgba(255, 255, 255, 0.8)
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 103%;
 }
 
 .tooltip-no-transition .recharts-tooltip-wrapper {

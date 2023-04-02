@@ -1,18 +1,23 @@
+// importing the necessary libraries
 import React, {Component, useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+// this is the API key and hash from the Marvel API
 const API_KEY = import.meta.env.VITE_API_KEY;
 const HASH = import.meta.env.VITE_HASH;
 
+// this component is used to display the details of a character
 const CharacterDetail = () => {
 
+      // this is used to get the id of the character from the url
       let params = useParams();
+      // this is used to store the details of the character
       const [fullDetails, setFullDetails] = useState(null);
 
+      // this is used to get the details of the character from the Marvel API
      useEffect(() => {
 
-            const id = params.id.replace(':', '');
             const getCharDetails = async () => {
                   try {
                     const id = params.id.replace(':', ''); 
@@ -31,6 +36,7 @@ const CharacterDetail = () => {
             <div>
                   <h1>Character Details</h1>
                   <div className="charDetails">
+                        
                         <h1>{ fullDetails && fullDetails.name }</h1>
                         <img src={ fullDetails && fullDetails.thumbnail.path + '.' + fullDetails.thumbnail.extension } alt={ fullDetails && fullDetails.name } />
 
